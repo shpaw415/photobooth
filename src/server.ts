@@ -13,7 +13,11 @@ Bun.serve({
 
 const browser = await puppeteer.launch({
 	headless: false,
-	args: ["--use-fake-ui-for-media-stream"],
+	args: [
+		"--use-fake-ui-for-media-stream",
+		"--no-sandbox",
+		"--disable-setuid-sandbox",
+	],
 	executablePath: "/bin/chromium-browser",
 });
 
