@@ -1,5 +1,6 @@
 import HTML from "./index.html";
 import * as puppeteer from "puppeteer";
+import * as chrome from "chrome-launcher";
 
 const origin = "http://localhost:3000";
 
@@ -11,21 +12,20 @@ Bun.serve({
 	},
 });
 
-const browser = await puppeteer.launch({
-	headless: false,
-	args: [
+const browser = await chrome.launch({
+	chromeFlags: [
 		"--use-fake-ui-for-media-stream",
-		"--no-sandbox",
-		"--disable-setuid-sandbox",
+		//"--no-sandbox",
+		//"--disable-setuid-sandbox",
+		"--kiosk",
+		"--start-maximized",
+		//"--noerrdialogs",
+		//"--disable-session-crashed-bubble",
+		//"--disable-infobars",
+		"--disable-features=TranslateUI",
 	],
-	executablePath: "/bin/chromium-browser",
+	startingUrl: "http://localhost:3000",
+	chromePath: "/bin/chromium-browser",
 });
-
-await browser
-	.defaultBrowserContext()
-	.overridePermissions(origin, ["camera", "microphone"]);
-
-const page = await browser.newPage();
-await page.goto(origin);
 
 console.log("Server is running");
