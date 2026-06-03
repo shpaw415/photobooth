@@ -14,6 +14,7 @@ Bun.serve({
 const browser = await puppeteer.launch({
 	headless: false,
 	args: ["--use-fake-ui-for-media-stream"],
+	executablePath: "/bin/chromium-browser",
 });
 
 await browser
