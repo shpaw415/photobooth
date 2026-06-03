@@ -18,9 +18,9 @@
 		"unix-print": "^1.3.2"
 	},
 	"scripts": {
-		"dev": "bun run src/server.ts",
+		"dev": "sudo bun run src/server.ts",
 		"test": "bun test",
-		"start": "./dist/start",
+		"start": "sudo ./dist/start",
 		"build": "bun build --compile src/server.ts --outfile dist/start"
 	}
 }
