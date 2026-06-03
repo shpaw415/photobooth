@@ -1,0 +1,3 @@
+[submodule "wiringOP"]
+	path = wiringOP
+	url = https://github.com/orangepi-xunlong/wiringOP.git

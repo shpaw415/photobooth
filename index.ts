@@ -1,0 +1,33 @@
+export {
+	assertWiringPiSymbolsBound,
+	createOrangePi3LtsBoard,
+	createOrangePi3LtsGpio,
+	createWiringPiBindings,
+	DigitalValue,
+	getOrangePi3LtsPinByGpioPin,
+	getOrangePi3LtsPinByPhysicalPin,
+	getOrangePi3LtsPinByWiringPiPin,
+	OrangePi3LtsBoard,
+	OrangePi3LtsGpio,
+	OrangePi3LtsInputPin,
+	OrangePi3LtsOutputPin,
+	ORANGE_PI_3_LTS_GPIO_PINS,
+	PinMode,
+	PullMode,
+	resolveOrangePi3LtsPin,
+	resolveWiringOpLibraryPath,
+	WIRING_PI_SYMBOL_NAMES,
+} from "./src/gpio/orangePi3Lts";
+
+export type {
+	OrangePi3LtsBoardOptions,
+	OrangePi3LtsGpioOptions,
+	OrangePi3LtsGpioLike,
+	OrangePi3LtsInputPinOptions,
+	OrangePi3LtsOutputPinOptions,
+	OrangePi3LtsPinReference,
+	OrangePi3LtsPinDefinition,
+	PinNumbering,
+	WiringPiBindings,
+	WiringPiLibraryLoader,
+} from "./src/gpio/orangePi3Lts";
