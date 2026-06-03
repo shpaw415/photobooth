@@ -15,8 +15,8 @@ Bun.serve({
 const browser = await chrome.launch({
 	chromeFlags: [
 		"--use-fake-ui-for-media-stream",
-		//"--no-sandbox",
-		//"--disable-setuid-sandbox",
+		"--no-sandbox",
+		"--disable-setuid-sandbox",
 		"--kiosk",
 		"--start-maximized",
 		//"--noerrdialogs",
